@@ -59,10 +59,13 @@ CREATE TABLE invoice (
 
 CREATE TABLE purchase (
   purchase_id INT AUTO_INCREMENT PRIMARY KEY,
+  product_id VARCHAR(10),
+  quantity INT,
   provider_id VARCHAR(10),
   manager_id VARCHAR(10),
   purchase_date TIMESTAMP,
   total_amount DECIMAL(10, 2),
+  FOREIGN KEY (product_id) REFERENCES product(product_id),
   FOREIGN KEY (provider_id) REFERENCES provider(provider_id),
   FOREIGN KEY (manager_id) REFERENCES manager(manager_id)
 );
