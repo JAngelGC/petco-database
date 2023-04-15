@@ -79,3 +79,24 @@ INSERT INTO product (product_id, product_name, price, stock, category_id, discou
 VALUES ('P0012', 'Toothpaste', 2.99, 50, 'CA006', 'D0006');
 
 
+
+-- Provider
+INSERT INTO provider (provider_id, provider_name, email, phone_number, address)
+VALUES ('PR001', 'ABC Supplier', 'abc@example.com', '1234567890', '1234 Elm Street');
+
+INSERT INTO provider (provider_id, provider_name, email, phone_number, address)
+VALUES ('PR002', 'XYZ Distributors', 'xyz@example.com', '9876543210', '5678 Oak Avenue');
+
+INSERT INTO provider (provider_id, provider_name, email, phone_number, address)
+VALUES ('PR003', 'GHI Manufacturers', 'ghi@example.com', '4567890123', '9012 Maple Drive');
+
+INSERT INTO provider (provider_id, provider_name, email, phone_number, address)
+VALUES ('PR004', 'JKL Enterprises', 'jkl@example.com', '7890123456', '3456 Pine Lane');
+
+INSERT INTO provider (provider_id, provider_name, email, phone_number, address)
+VALUES ('PR005', 'MNO Suppliers', 'mno@example.com', '2109876543', '6789 Cedar Road');
+
+INSERT INTO provider (provider_id, provider_name, email, phone_number, address)
+VALUES ('PR006', 'PQR Distributors', 'pqr@example.com', '5432109876', '7890 Birch Street');
+
+
