@@ -27,5 +27,5 @@ CREATE TABLE cashier (
   phone_number VARCHAR(20),
   address VARCHAR(255),
   manager_id VARCHAR(10),
-  FOREIGN KEY (manager_id) REFERENCES cashier(cashier_id)
+  FOREIGN KEY (manager_id) REFERENCES manager(manager_id)
 );
