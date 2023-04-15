@@ -1,5 +1,5 @@
-CREATE DATABASE Petco;
-USE Petco;
+-- CREATE DATABASE Petco;
+-- USE Petco;
 
 CREATE TABLE provider (
   provider_id VARCHAR(10) PRIMARY KEY,
@@ -37,11 +37,11 @@ CREATE TABLE product (
 
 
 CREATE TABLE sale (
-  sale_id VARCHAR(10) PRIMARY KEY,
+  sale_id INT AUTO_INCREMENT PRIMARY KEY,
   product_id VARCHAR(10),
   cashier_id VARCHAR(10),
   customer_id VARCHAR(10),
-  sale_date DATE,
+  sale_date TIMESTAMP,
   total_amount DECIMAL(10, 2),
   FOREIGN KEY (product_id) REFERENCES product(product_id),
   FOREIGN KEY (cashier_id) REFERENCES cashier(cashier_id),
@@ -49,19 +49,19 @@ CREATE TABLE sale (
 );
 
 CREATE TABLE invoice (
-  invoice_id VARCHAR(10) PRIMARY KEY,
+  invoice_id INT AUTO_INCREMENT PRIMARY KEY,
   customer_id VARCHAR(10),
-  sale_id VARCHAR(10),
+  sale_id INT,
   FOREIGN KEY (customer_id) REFERENCES customer(customer_id),
   FOREIGN KEY (sale_id) REFERENCES sale(sale_id)
 );
 
 
 CREATE TABLE purchase (
-  purchase_id VARCHAR(10) PRIMARY KEY,
+  purchase_id INT AUTO_INCREMENT PRIMARY KEY,
   provider_id VARCHAR(10),
   manager_id VARCHAR(10),
-  purchase_date DATE,
+  purchase_date TIMESTAMP,
   total_amount DECIMAL(10, 2),
   FOREIGN KEY (provider_id) REFERENCES provider(provider_id),
   FOREIGN KEY (manager_id) REFERENCES manager(manager_id)
