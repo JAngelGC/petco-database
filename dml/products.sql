@@ -30,7 +30,6 @@ CREATE TABLE product (
   price DECIMAL(10, 2),
   stock INT,
   category_id VARCHAR(10),
-  department_id VARCHAR(10),
   discount_id VARCHAR(10),
   FOREIGN KEY (category_id) REFERENCES category(category_id),
   FOREIGN KEY (discount_id) REFERENCES discount(discount_id)
