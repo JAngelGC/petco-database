@@ -69,3 +69,15 @@ CREATE TABLE purchase (
   FOREIGN KEY (provider_id) REFERENCES provider(provider_id),
   FOREIGN KEY (manager_id) REFERENCES manager(manager_id)
 );
+
+
+CREATE TABLE priceHistory (
+  priceHistory_id INT AUTO_INCREMENT PRIMARY KEY,
+  product_id VARCHAR(10),
+  provider_id VARCHAR(10),
+  old_price DECIMAL(10, 2),
+  new_price DECIMAL(10, 2),
+  change_date TIMESTAMP,
+  FOREIGN KEY (product_id) REFERENCES product(product_id),
+  FOREIGN KEY (provider_id) REFERENCES provider(provider_id),
+);

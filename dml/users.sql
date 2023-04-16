@@ -17,6 +17,7 @@ CREATE TABLE manager (
   email VARCHAR(255),
   phone_number VARCHAR(20),
   address VARCHAR(255)
+  start_date DATE DEFAULT CURRENT_DATE; 
 );
 
 CREATE TABLE cashier (
@@ -28,4 +29,5 @@ CREATE TABLE cashier (
   address VARCHAR(255),
   manager_id VARCHAR(10),
   FOREIGN KEY (manager_id) REFERENCES manager(manager_id)
+  start_date DATE DEFAULT CURRENT_DATE; 
 );
