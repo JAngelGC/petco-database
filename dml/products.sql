@@ -80,4 +80,11 @@ CREATE TABLE priceHistory (
   change_date TIMESTAMP,
   FOREIGN KEY (product_id) REFERENCES product(product_id),
   FOREIGN KEY (provider_id) REFERENCES provider(provider_id),
+
+
+CREATE TABLE saleRecord (
+  sale_record_id INT AUTO_INCREMENT PRIMARY KEY,
+  sale_id INT,
+  sale_date TIMESTAMP,
+  FOREIGN KEY (sale_id) REFERENCES sale(sale_id)
 );
