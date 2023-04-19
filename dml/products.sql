@@ -79,5 +79,5 @@ CREATE TABLE priceHistory (
   new_price DECIMAL(10, 2),
   change_date TIMESTAMP,
   FOREIGN KEY (product_id) REFERENCES product(product_id),
-  FOREIGN KEY (provider_id) REFERENCES provider(provider_id),
+  FOREIGN KEY (provider_id) REFERENCES provider(provider_id)
 );

@@ -1,7 +1,7 @@
 DELIMITER //
 
 CREATE TRIGGER trg_price_change
-AFTER UPDATE ON product
+BEFORE UPDATE ON product
 FOR EACH ROW
 BEGIN
     IF NEW.price != OLD.price THEN
