@@ -1,0 +1,13 @@
+DELIMITER $$
+
+CREATE EVENT ev_last_sales
+ON SCHEDULE
+    EVERY 1 MINUTE
+    STARTS '2023-04-15 12:00:00'
+DO
+BEGIN
+    CALL sp_get_last_sales();
+    
+END$$
+
+DELIMITER ;
